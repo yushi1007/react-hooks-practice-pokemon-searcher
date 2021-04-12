@@ -19,16 +19,13 @@ function PokemonPage() {
       });
   }, []);
 
+  const handleForm = (newPokemon) => {
+    setPokemon([...pokemon, newPokemon])
+}
+
   const filteredName = pokemon.filter((p) => {
     return p.name.toLowerCase().includes(searchName.toLowerCase());
 });
-  
-  const handleForm = (newPokemon) => {
-      setPokemon([...pokemon, newPokemon])
-  }
-// const handleSearch = (event) => {
-//   setSearchName(event.target.value)
-// }
 
   return (
     <Container>
